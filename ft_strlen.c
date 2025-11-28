@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalayyou <nalayyou@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 15:20:22 by nalayyou          #+#    #+#             */
-/*   Updated: 2025/11/27 15:20:26 by nalayyou         ###   ########.fr       */
+/*   Created: 2025/11/27 15:19:59 by nalayyou          #+#    #+#             */
+/*   Updated: 2025/11/27 15:20:04 by nalayyou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *str, size_t a)
+size_t	ft_strlen(char const *str)
 {
-	size_t			index;
-	unsigned char	*ptr;
+	size_t	index;
 
-	ptr = (unsigned char *)str;
 	index = 0;
-	while (index < a)
-	{
-		ptr[index] = '\0';
+	while (str[index])
 		index++;
-	}
+	return (index);
 }
+
+/*int main(){
+	char c[] = "hii";
+	printf("%d" , ft_strlen(c));
+}*/

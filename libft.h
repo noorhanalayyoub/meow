@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalayyou <nalayyou@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 15:20:22 by nalayyou          #+#    #+#             */
-/*   Updated: 2025/11/27 15:20:26 by nalayyou         ###   ########.fr       */
+/*   Created: 2025/11/28 14:54:47 by nalayyou          #+#    #+#             */
+/*   Updated: 2025/11/28 15:47:08 by nalayyou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+int		ft_isdigit(int c);
+int		ft_isalpha(int c);
+int		ft_isalnum(int c);
+size_t 		ft_strlcat(char *dest, const char *src, size_t size);
+size_t 		ft_strlcpy(char *dest, const char *src, size_t size);
+size_t		ft_strlen(char const *str);
+#endif
 
-void	ft_bzero(void *str, size_t a)
-{
-	size_t			index;
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)str;
-	index = 0;
-	while (index < a)
-	{
-		ptr[index] = '\0';
-		index++;
-	}
-}

@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalayyou <nalayyou@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 15:20:22 by nalayyou          #+#    #+#             */
-/*   Updated: 2025/11/27 15:20:26 by nalayyou         ###   ########.fr       */
+/*   Created: 2025/11/28 15:19:12 by nalayyou          #+#    #+#             */
+/*   Updated: 2025/11/28 15:19:22 by nalayyou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_bzero(void *str, size_t a)
+int	ft_tolower(int c)
 {
-	size_t			index;
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)str;
-	index = 0;
-	while (index < a)
-	{
-		ptr[index] = '\0';
-		index++;
-	}
+	if (c <= 90 && c >= 65)
+		c += 32;
+	return (c);
 }
